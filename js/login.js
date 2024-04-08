@@ -1,5 +1,15 @@
 var msg = document.getElementById("message");
 
+function updateErrorMessageVisibility() {
+    if (msg.textContent.trim() === "") {
+        msg.classList.remove("error");
+    } else {
+        msg.classList.add("error");
+    }
+}
+
+updateErrorMessageVisibility();
+
 function handleInputChange(event, type) {
     var usernameInput = document.getElementById("username");
     var passwordInput = document.getElementById("password");
