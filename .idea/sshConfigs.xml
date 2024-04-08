@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="20.119.89.40" id="0098a546-317e-43c1-9cd0-eb477c3cd86a" keyPath="C:\Users\HP\Desktop\WebTech\vm_ssh_key.pem" port="22" nameFormat="DESCRIPTIVE" username="purplegeminii" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
