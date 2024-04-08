@@ -1,0 +1,44 @@
+/** LEFT MENU*/
+.left-menu {
+    width: 20dvw;
+    height: 100%;
+    background-color: rgba(234, 234, 234, 0.346);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    border-right: 2px solid rgba(170, 169, 169, 0.384);
+}
+
+.left-menu-items {
+    margin-left: 5dvw;  margin-top: 30dvh;
+}
+.left-menu-items p {
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.left-menu-items p:active {
+    text-decoration: underline;
+}
+
+.left-menu-items p:hover {
+    transform: scale(1.05);
+}
+
+.left-menu-items p img {
+    width: 16px;
+    padding-right: 20px;
+}
+
+.app-name {
+    font-size: 20px;
+    margin-left: 4dvw;  margin-top: 5dvh;
+}
+
+.user-name {
+    margin-left: 5dvw;  margin-top: 40dvh;
+    font-size: 11px;
+
+}
+/** LEFT MENU*/
