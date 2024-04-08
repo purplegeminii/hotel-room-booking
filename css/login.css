@@ -61,6 +61,7 @@ a:hover {
 }
 
 #message {
+    padding: 20px;
     background-color: #d26e6e;
     font-weight: bold;
     color: white;
