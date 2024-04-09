@@ -1,9 +1,9 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Headers: *");
 
 include "../settings/connection.php";
 global $conn;
@@ -21,7 +21,7 @@ $password1 = $user['password1'];
 $password2 = $user['password2'];
 
 if ($password1 != $password2) {
-    $response = ["status" => 0, "message" => "passwords don't match", "redirect" => "/login/register"];
+    $response = ["status" => 0, "message" => "passwords don't match", "redirect" => "../login/register.php"];
     echo json_encode($response);
     exit();
 }
@@ -34,9 +34,9 @@ $create_record = $conn->prepare($query);
 $rid = 3;
 $create_record->bind_param('ssssssssi', $fname, $lname, $gender, $dob, $email, $hashedPassword, $phone_num, $address, $rid);
 if ($create_record->execute()) {
-    $response = ["status" => 1, "message" => "Registered successfully", "redirect" => "/login/login"];
+    $response = ["status" => 1, "message" => "Registered successfully", "redirect" => "../login/login.php"];
 } else {
-    $response = ["status" => 0, "message" => "Registration failed", "redirect" => "/login/register"];
+    $response = ["status" => 0, "message" => "Registration failed", "redirect" => "../login/register.php"];
 }
 echo json_encode($response);
 exit();

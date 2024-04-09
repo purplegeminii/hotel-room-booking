@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Login Page</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -28,10 +29,11 @@
             <button type="submit" name="login-button" id="login-btn">LOGIN</button>
         </form>
         <br/>
-        <p class="sign-up">Don't have an account? <a href="../login/register.html">Sign up</a></p>
+        <p class="sign-up">Don't have an account? <a href="../login/register.php">Sign up</a></p>
     </div>
 
     <script src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </body>
 </html>

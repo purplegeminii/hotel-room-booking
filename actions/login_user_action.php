@@ -1,9 +1,9 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Headers: *");
 
 session_start();
 include "../settings/connection.php";
@@ -45,19 +45,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['User_ID'];
             $_SESSION['role_id'] = $row['rid'];
             if ($row['rid']==2) {
-                $response = ["status" => 1, "message" => "login successful", "redirect" => "/admin/dashboard"];
+                $response = ["status" => 1, "message" => "login successful", "redirect" => "../admin/dashboard.php"];
             } else if ($row['rid']==3) {
-                $response = ["status" => 1, "message" => "login successful", "redirect" => "/view/dashboard"];
+                $response = ["status" => 1, "message" => "login successful", "redirect" => "../view/dashboard.php"];
             }
         } else {
             // Passwords do not match, login failed
-            $response = ["status" => 0, "message" => "login failed, passwords do not match", "redirect" => "/login/login"];
+            $response = ["status" => 0, "message" => "login failed, passwords do not match", "redirect" => "../login/login.php"];
         }
         echo json_encode($response);
         exit();
     } else {
         // Email does not exist, login failed
-        $response = ["status" => 0, "message" => "login failed, email does not exist", "redirect" => "/login/login"];
+        $response = ["status" => 0, "message" => "login failed, email does not exist", "redirect" => "../login/login.php"];
     }
 
     mysqli_stmt_free_result($stmt);
