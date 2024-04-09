@@ -9,12 +9,12 @@ function handleInputChange(event, type) {
         case "user":
             usernameInput.classList.remove("error");
             error = event.target.value === "" ? "Please enter a username" : "";
-            event.target.value === "" ? msg.style.backgroundColor = "#d26e6e" : "none";
+            event.target.value !== "" ? msg.style.backgroundColor = "#d26e6e" : "";
             break;
         case "pass":
             passwordInput.classList.remove("error");
             error = event.target.value === "" ? "Please enter a password" : "";
-            event.target.value === "" ? msg.style.backgroundColor = "#d26e6e" : "none";
+            event.target.value !== "" ? msg.style.backgroundColor = "#d26e6e" : "";
             break;
         default:
     }
