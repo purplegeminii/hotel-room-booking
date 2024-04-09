@@ -1,15 +1,5 @@
 var msg = document.getElementById("message");
 
-function updateErrorMessageVisibility() {
-    if (msg.textContent.trim() === "") {
-        msg.classList.remove("error");
-    } else {
-        msg.classList.add("error");
-    }
-}
-
-updateErrorMessageVisibility();
-
 function handleInputChange(event, type) {
     var usernameInput = document.getElementById("username");
     var passwordInput = document.getElementById("password");
@@ -19,10 +9,12 @@ function handleInputChange(event, type) {
         case "user":
             usernameInput.classList.remove("error");
             error = event.target.value === "" ? "Please enter a username" : "";
+            event.target.value === "" ? msg.style.backgroundColor = "#d26e6e" : "none";
             break;
         case "pass":
             passwordInput.classList.remove("error");
             error = event.target.value === "" ? "Please enter a password" : "";
+            event.target.value === "" ? msg.style.backgroundColor = "#d26e6e" : "none";
             break;
         default:
     }
