@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $response = array();
 
-        $query = "SELECT User_ID, rid, passwd FROM Users WHERE email = ?";
+        $query = "SELECT User_ID, rid, passwd, fname FROM Users WHERE email = ?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Passwords match, login successful, set user_id & role_id
             $_SESSION['user_id'] = $row['User_ID'];
             $_SESSION['role_id'] = $row['rid'];
+            $_SESSION['fname'] = $row['fname'];
             if ($row['rid']==2) {
                 $response = ["status" => 1, "message" => "login successful", "redirect" => "../admin/dashboard.php"];
             } else if ($row['rid']==3) {

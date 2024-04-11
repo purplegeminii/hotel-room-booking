@@ -1,0 +1,13 @@
+body {
+    margin: 0px;
+}
+
+#content {
+    flex: 1;
+    position: absolute;
+    left: 20dvw;
+    top: 0;
+    /*display: grid;*/
+    /*align-items: center;*/
+    padding: 20px;
+}

@@ -3,7 +3,7 @@
 // Start the session
 session_start();
 
-function checkLoggedIn(): void {
+function checkLoggedIn() {
     // Check if the user ID session exists
     if (!isset($_SESSION['user_id'])) {
         header("location: ../login/login.php");

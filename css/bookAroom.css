@@ -1,0 +1,105 @@
+h1 {
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/*#details {*/
+/*    flex-direction: column;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    left: 500px;*/
+/*    top: -150px;*/
+/*}*/
+
+/*#details p {*/
+/*    margin: 2px;*/
+/*    padding: 2px;*/
+/*}*/
+
+/*#room-image {*/
+/*    height: 150px;*/
+/*    width:250px;*/
+/*}*/
+
+/*#room-image:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+
+.room-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing between each room */
+    width: 50em;
+}
+
+#room-image {
+    width: 250px;
+    height: 150px;
+    margin-right: 50px; /* Adjust spacing between image and details */
+    border-radius: 8px; /* Add rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+#room-image:hover {
+    transform: scale(1.05);
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+}
+
+#details p {
+    margin: 0; /* Remove default margin */
+    padding: 2px;
+}
+
+/* Adjust positioning */
+.room-container {
+    position: relative;
+}
+
+#details {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the distance from the right side */
+}
+
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.search-bar-container input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-bar-container button img {
+    width: 25px;
+    height: 25px;
+}
+
+.search-bar-container button img:hover {
+    opacity: 0.7;
+}

@@ -47,14 +47,15 @@ CREATE TABLE `RoomTypes` (
     `Room_Type` varchar(50) NOT NULL,
     `Occupancy` int(11) NOT NULL,
     `Price_Per_Night` decimal(10,2) NOT NULL,
+    `Img_Src` VARCHAR(255),
     PRIMARY KEY (`RoomType_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table `RoomTypes`
-INSERT INTO `RoomTypes` (`Room_Type`, `Occupancy`, `Price_Per_Night`) VALUES
-('Single', 1, 50.00),
-('Double', 2, 70.00),
-('Suite', 4, 120.00);
+INSERT INTO `RoomTypes` (`Room_Type`, `Occupancy`, `Price_Per_Night`, `Img_Src`) VALUES
+('Single', 1, 50.00, '../asserts/images/Single.jpeg'),
+('Double', 2, 70.00, '../asserts/images/Double.jpeg'),
+('Suite', 4, 120.00, '../asserts/images/Suite.jpeg');
 
 -- Table structure for table `Rooms`
 CREATE TABLE `Rooms` (
@@ -64,6 +65,29 @@ CREATE TABLE `Rooms` (
     PRIMARY KEY (`Room_ID`),
     CONSTRAINT `Rooms_ibfk_1` FOREIGN KEY (`RoomType_ID`) REFERENCES `RoomTypes` (`RoomType_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table `Rooms`
+INSERT INTO `Rooms` (`RoomType_ID`, `Availability`) VALUES
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(1, '1'),   -- Single
+(2, '1'),   -- Double
+(2, '1'),   -- Double
+(2, '1'),   -- Double
+(2, '1'),   -- Double
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1'),   -- Suite
+(3, '1');   -- Suite
 
 -- Table structure for table `Bookings`
 CREATE TABLE `Bookings` (

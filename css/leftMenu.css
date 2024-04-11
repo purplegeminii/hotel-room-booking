@@ -6,7 +6,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     border-right: 2px solid rgba(170, 169, 169, 0.384);
 }
 
