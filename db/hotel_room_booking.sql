@@ -53,9 +53,9 @@ CREATE TABLE `RoomTypes` (
 
 -- Dumping data for table `RoomTypes`
 INSERT INTO `RoomTypes` (`Room_Type`, `Occupancy`, `Price_Per_Night`, `Img_Src`) VALUES
-('Single', 1, 50.00, '../asserts/images/Single.jpeg'),
-('Double', 2, 70.00, '../asserts/images/Double.jpeg'),
-('Suite', 4, 120.00, '../asserts/images/Suite.jpeg');
+('Single', 1, 50.00, '../assets/images/Single.jpeg'),
+('Double', 2, 70.00, '../assets/images/Double.jpeg'),
+('Suite', 4, 120.00, '../assets/images/Suite.jpeg');
 
 -- Table structure for table `Rooms`
 CREATE TABLE `Rooms` (
