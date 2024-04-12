@@ -24,13 +24,18 @@ $result = mysqli_query($conn, $sql);
 
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
 
-            <div class="room-container">
-                <img src="<?php echo $row['Img_Src'];?>" alt="<?= $row['Room_Type'] ?> room preview" id="room-image"/>
+            <div class="room-container" id="<?php echo $row['Room_Type'] ?>"
+                 onclick="bookThisRoom(this)">
+
+                <img src="<?php echo $row['Img_Src'];?>" alt="<?= $row['Room_Type'] ?> room preview"
+                    id="<?php echo $row['Room_Type'] ?>"/>
                 <div id = "details">
-                    <p>room type: <?php echo $row['Room_Type']; ?></p><br>
-                    <p>price($): <?php echo $row['Price_Per_Night']; ?></p><br>
-                    <p>current available rooms: <?php echo $row['Available_Rooms']; ?></p><br>
+                    <p>Room Type: <?php echo $row['Room_Type']; ?></p><br>
+                    <p>Price ($): <?php echo $row['Price_Per_Night']; ?></p><br>
+                    <p>Occupancy: <?php echo $row['Occupancy']; ?></p><br>
+                    <p>Available Rooms: <?php echo $row['Available_Rooms']; ?></p><br>
                 </div>
+
             </div>
 
         <?php endwhile; ?>
@@ -38,5 +43,3 @@ $result = mysqli_query($conn, $sql);
 <?php else: ?>
     <p>All Rooms have been booked.</p>
 <?php endif; ?>
-
-

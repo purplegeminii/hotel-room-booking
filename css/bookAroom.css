@@ -1,80 +1,27 @@
-h1 {
-    margin-bottom: 20px;
-    padding: 0;
-}
-
-/*#details {*/
-/*    flex-direction: column;*/
-/*    display: flex;*/
-/*    position: relative;*/
-/*    left: 500px;*/
-/*    top: -150px;*/
+/*h1 {*/
+/*    margin-bottom: 20px;*/
+/*    padding: 0;*/
 /*}*/
 
-/*#details p {*/
-/*    margin: 2px;*/
-/*    padding: 2px;*/
-/*}*/
-
-/*#room-image {*/
-/*    height: 150px;*/
-/*    width:250px;*/
-/*}*/
-
-/*#room-image:hover {*/
-/*    transform: scale(1.05);*/
-/*}*/
-
-.room-container {
+.containerForm {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust spacing between each room */
-    width: 50em;
-}
-
-#room-image {
-    width: 250px;
-    height: 150px;
-    margin-right: 50px; /* Adjust spacing between image and details */
-    border-radius: 8px; /* Add rounded corners to the image */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
-}
-
-#room-image:hover {
-    transform: scale(1.05);
-}
-
-#details {
-    display: flex;
+    width: 100%;
     flex-direction: column;
-}
+    align-items: center;
+    margin-bottom: 5%;
 
-#details p {
-    margin: 0; /* Remove default margin */
-    padding: 2px;
-}
 
-/* Adjust positioning */
-.room-container {
-    position: relative;
 }
-
-#details {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px; /* Adjust the distance from the right side */
-}
-
 
 .search-bar-container {
     display: flex;
     align-items: center;
+    /*justify-content: center;*/
     background-color: #f2f2f2;
     border-radius: 25px;
     padding: 5px 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 40%;
 }
 
 .search-bar-container label {
@@ -102,4 +49,52 @@ h1 {
 
 .search-bar-container button img:hover {
     opacity: 0.7;
+}
+
+
+#content2 {
+    width: inherit;
+}
+
+
+.room-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing between each room */
+    width: 50em;
+}
+
+/* Adjust positioning */
+.room-container {
+    position: relative;
+}
+
+.room-container img {
+    width: 250px;
+    height: 150px;
+    margin-right: 50px; /* Adjust spacing between image and details */
+    border-radius: 8px; /* Add rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.room-container img:hover {
+    transform: scale(1.05);
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+}
+
+#details {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Adjust the distance from the right side */
+}
+
+#details p {
+    margin: 0; /* Remove default margin */
+    padding: 2px;
 }

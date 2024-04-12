@@ -65,7 +65,7 @@ function loginSubmit(event) {
     })
         .then((response) => response.json())
         .then((response) => {
-            console.log(response.data);
+            console.log(response);
             if (response.status === 1) {
                 // Display success message with SweetAlert2
                 Swal.fire({

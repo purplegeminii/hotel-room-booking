@@ -93,13 +93,14 @@ INSERT INTO `Rooms` (`RoomType_ID`, `Availability`) VALUES
 CREATE TABLE `Bookings` (
     `Booking_ID` int(11) NOT NULL AUTO_INCREMENT,
     `User_ID` int(11) NOT NULL,
-    `Room_ID` int(11) NOT NULL,
+    `RoomType_ID` int(11) NOT NULL,
     `Check_In_Date` date NOT NULL,
-    `Check_Out_Date` date NOT NULL,
+    `Check_Out_Date` date,
+    `Qty` int(11) NOT NULL,
     `Total_Price` decimal(10,2) NOT NULL,
     PRIMARY KEY (`Booking_ID`),
     CONSTRAINT `Bookings_ibfk_1` FOREIGN KEY (`User_ID`) REFERENCES `Users` (`User_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT `Bookings_ibfk_2` FOREIGN KEY (`Room_ID`) REFERENCES `Rooms` (`Room_ID`) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT `Bookings_ibfk_2` FOREIGN KEY (`RoomType_ID`) REFERENCES `RoomTypes` (`RoomType_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table `Payments`
