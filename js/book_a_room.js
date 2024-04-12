@@ -82,7 +82,7 @@ function changeQty(element, limit) {
     }
 }
 
-function handleBooking(event) {
+function handleBooking() {
     event.preventDefault();
 
     const roomType = document.getElementById('room-type').value;
@@ -109,13 +109,26 @@ function handleBooking(event) {
         body: JSON.stringify(bookingData)
     })
         .then(response => response.json())
-        .then(data => {
-            // Handle the response data
-            console.log(data);
-            // Optionally, perform additional actions based on the response
+        .then(response => {
+            if (response.status === 1) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: response.message,
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(() => {
+                    loadContent('../view/YourRoom.php');
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.message
+                });
+            }
         })
         .catch(error => {
             console.error('Error:', error);
-            // Optionally, handle errors
         });
 }

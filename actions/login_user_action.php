@@ -45,11 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['User_ID'];
             $_SESSION['role_id'] = $row['rid'];
             $_SESSION['fname'] = $row['fname'];
-            if ($row['rid']==2) {
-                $response = ["status" => 1, "message" => "login successful", "redirect" => "../admin/dashboard.php"];
-            } else if ($row['rid']==3) {
-                $response = ["status" => 1, "message" => "login successful", "redirect" => "../view/dashboard.php"];
-            }
+//            if ($row['rid']==2) {
+//                $response = ["status" => 1, "message" => "login successful", "redirect" => "../admin/dashboard.php"];
+//            } else if ($row['rid']==3) {
+//                $response = ["status" => 1, "message" => "login successful", "redirect" => "../view/dashboard.php"];
+//            }
+            $response = ["status" => 1, "message" => "login successful", "redirect" => "../view/dashboard.php"];
         } else {
             // Passwords do not match, login failed
             $response = ["status" => 0, "message" => "login failed, passwords do not match", "redirect" => "../login/login.php"];

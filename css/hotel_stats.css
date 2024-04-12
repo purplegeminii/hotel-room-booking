@@ -1,0 +1,78 @@
+.chartCard {
+    width: inherit;
+    /* height:; */
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chartBox {
+    width: 700px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px #fb4a0a;
+    box-shadow: 0 0 10px rgba(215, 79, 1, 0.913);
+    background: white;
+}
+
+/*.nav-btn{*/
+/*    width:250px ;*/
+/*    border-radius: 8px;*/
+/*    padding: 8px 16px;*/
+/*    background-color: #151315;*/
+/*    color: whitesmoke;*/
+/*    cursor: pointer;*/
+/*    text-align: left;*/
+/*}*/
+
+.buttons :hover{
+    background-color: #444343;
+    scale: 1.02;
+}
+
+#filter-btn {
+    gap:9px;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #dadada;
+    color: #fb4a0a;
+}
+
+.content{
+    flex:4;
+    padding: 30px;
+}
+
+#heading p{
+    font-size: 14px;
+    /*color: #969696;*/
+}
+
+.stat-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:20px;
+    gap: 30px;
+    justify-content: space-evenly;
+
+}
+.stat-box h5{
+    font-weight: 300;
+    font-size: large;
+}
+
+.day,.week,.month{
+    display: inline-block;
+    overflow:hidden;
+    /*color: whitesmoke;*/
+    /* text-align: center; */
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(215, 79, 1, 0.913);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
